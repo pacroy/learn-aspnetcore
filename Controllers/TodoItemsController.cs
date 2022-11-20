@@ -24,10 +24,10 @@ namespace learn_aspnetcore.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
-          if (_context.TodoItems == null)
-          {
-              return NotFound();
-          }
+            if (_context.TodoItems == null)
+            {
+                return NotFound();
+            }
             return await _context.TodoItems.ToListAsync();
         }
 
@@ -35,10 +35,10 @@ namespace learn_aspnetcore.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
         {
-          if (_context.TodoItems == null)
-          {
-              return NotFound();
-          }
+            if (_context.TodoItems == null)
+            {
+                return NotFound();
+            }
             var todoItem = await _context.TodoItems.FindAsync(id);
 
             if (todoItem == null)
@@ -85,10 +85,10 @@ namespace learn_aspnetcore.Controllers
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
-          if (_context.TodoItems == null)
-          {
-              return Problem("Entity set 'TodoContext.TodoItems'  is null.");
-          }
+            if (_context.TodoItems == null)
+            {
+                return Problem("Entity set 'TodoContext.TodoItems'  is null.");
+            }
             _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync();
 
