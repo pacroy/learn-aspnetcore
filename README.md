@@ -6,40 +6,44 @@ Learn to create a web API with ASP.NET Core based [this tutorial](https://learn.
 
 1. <kbd>Ctrl</kbd> + <kbd>F5</kbd> or go to Menu -> Run -> Run Without Debugging
 2. The browser should be automatically opened. Otherwise, grab the server URL and post from the debug console log.
-3. Open Swagger page at path `/swagger`.
-4. You can test <kbd>GET</kbd> `/WeatherForcast` API on the Swagger page and you should see response similar to this:
+3. Open the Swagger page at path `/swagger`.
+4. Test the <kbd>POST</kbd> `/api/TodoItems` API with the following body:
 
-```json
-[
-  {
-    "date": "2022-11-21",
-    "temperatureC": 27,
-    "temperatureF": 80,
-    "summary": "Balmy"
-  },
-  {
-    "date": "2022-11-22",
-    "temperatureC": -13,
-    "temperatureF": 9,
-    "summary": "Cool"
-  },
-  {
-    "date": "2022-11-23",
-    "temperatureC": -15,
-    "temperatureF": 6,
-    "summary": "Freezing"
-  },
-  {
-    "date": "2022-11-24",
-    "temperatureC": 25,
-    "temperatureF": 76,
-    "summary": "Mild"
-  },
-  {
-    "date": "2022-11-25",
-    "temperatureC": 41,
-    "temperatureF": 105,
-    "summary": "Bracing"
-  }
-]
-```
+    ```json
+    {
+      "name": "walk dog",
+      "isComplete": true
+    }
+    ```
+
+    You should get the following similar response:
+
+    ```json
+    {
+      "id": 1,
+      "name": "walk dog",
+      "isComplete": true
+    }
+    ```
+
+    The response's `location` header should point to the newly-created TodoItem:
+
+    ```headers
+    content-type: application/json; charset=utf-8 
+    date: Sun,20 Nov 2022 08:35:35 GMT 
+    location: http://localhost:5206/api/TodoItems/1 
+    server: Kestrel 
+    transfer-encoding: chunked 
+    ```
+
+5. Test the <kbd>GET</kbd> `/api/TodoItems/{id}` API for the new TodoItem an you should get the same response:
+
+    ```json
+    {
+      "id": 1,
+      "name": "walk dog",
+      "isComplete": true
+    }
+    ```
+
+6. Add another TodoItem with <kbd>POST</kbd> and test the <kbd>GET</kbd> `/api/TodoItems`.
