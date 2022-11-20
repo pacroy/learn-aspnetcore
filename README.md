@@ -12,34 +12,34 @@ Learn to create a web API with ASP.NET Core based [this tutorial](https://learn.
 ```json
 [
   {
-    "date": "2022-11-21T14:45:12.162479+07:00",
-    "temperatureC": 14,
-    "temperatureF": 57,
-    "summary": "Warm"
-  },
-  {
-    "date": "2022-11-22T14:45:12.162841+07:00",
-    "temperatureC": 1,
-    "temperatureF": 33,
-    "summary": "Cool"
-  },
-  {
-    "date": "2022-11-23T14:45:12.162849+07:00",
-    "temperatureC": -19,
-    "temperatureF": -2,
-    "summary": "Sweltering"
-  },
-  {
-    "date": "2022-11-24T14:45:12.16285+07:00",
-    "temperatureC": 21,
-    "temperatureF": 69,
+    "date": "2022-11-21",
+    "temperatureC": 27,
+    "temperatureF": 80,
     "summary": "Balmy"
   },
   {
-    "date": "2022-11-25T14:45:12.16285+07:00",
-    "temperatureC": 10,
-    "temperatureF": 49,
+    "date": "2022-11-22",
+    "temperatureC": -13,
+    "temperatureF": 9,
+    "summary": "Cool"
+  },
+  {
+    "date": "2022-11-23",
+    "temperatureC": -15,
+    "temperatureF": 6,
     "summary": "Freezing"
+  },
+  {
+    "date": "2022-11-24",
+    "temperatureC": 25,
+    "temperatureF": 76,
+    "summary": "Mild"
+  },
+  {
+    "date": "2022-11-25",
+    "temperatureC": 41,
+    "temperatureF": 105,
+    "summary": "Bracing"
   }
 ]
 ```
