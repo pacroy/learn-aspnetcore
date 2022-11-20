@@ -49,3 +49,5 @@ Learn to create a web API with ASP.NET Core based [this tutorial](https://learn.
 6. Add another TodoItem with <kbd>POST</kbd> and test the <kbd>GET</kbd> `/api/TodoItems`.
 7. Test the <kbd>PUT</kbd> `/api/TodoItems/{id}` by getting an item and update the data in the PUT request body.
 8. Test the <kbd>DELETE</kbd> `/api/TodoItems/{id}` on an existing item.
+
+_Note: You can also use [Postman](https://www.postman.com/), [curl](https://terminalcheatsheet.com/guides/curl-rest-api), or [httprepl](https://learn.microsoft.com/en-us/aspnet/core/web-api/http-repl/?view=aspnetcore-7.0) to test the APIs._
