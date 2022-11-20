@@ -47,3 +47,5 @@ Learn to create a web API with ASP.NET Core based [this tutorial](https://learn.
     ```
 
 6. Add another TodoItem with <kbd>POST</kbd> and test the <kbd>GET</kbd> `/api/TodoItems`.
+7. Test the <kbd>PUT</kbd> `/api/TodoItems/{id}` by getting an item and update the data in the PUT request body.
+8. Test the <kbd>DELETE</kbd> `/api/TodoItems/{id}` on an existing item.
